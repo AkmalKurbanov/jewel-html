@@ -4,6 +4,7 @@
   "description": "Project",
   "main": "index.js",
   "dependencies": {
+    "easy-pie-chart": "^2.1.7",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
     "swiper": "^5.0.4"

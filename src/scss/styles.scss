@@ -1,4 +1,4 @@
-﻿// Сторонние библиотеки 
+﻿// Сторонние библиотеки
 // @import "../js/libs/--/--/";
 //---------------------------------------------
 // css файлы библиотек/плагинов
@@ -8,8 +8,8 @@
 //---------------------------------------------
 // подключение сгенерированных иконок(fontello),
 // FontAwesome
-// @import "../assets/icons/fontello/--/--/";
-@import "../assets/icons/fontawesome5/web-fonts-with-css/css/fontawesome-all.min.css";
+//@import "../assets/icons/fontawesome5/web-fonts-with-css/css/fontawesome.min.css";
+ @import "../assets/icons/fontello/css/icon.css";
 //---------------------------------------------
 // подключение css файлов
 @import "fonts";
@@ -24,4 +24,7 @@
 @import "components/hamburger";
 @import "components/hero";
 @import "components/programm";
+@import "components/advantages";
+@import "components/caption";
+@import "components/counter";
 @import "components/footer";

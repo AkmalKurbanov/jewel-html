@@ -1,11 +1,50 @@
 .programm {
+  @include md {
+    padding-top: 40px;
+  }
+  @include md {
+    padding-top: 35px;
+  }
+  @include sm {
+    padding-top: 30px;
+  }
+  @include xs {
+    padding-top: 25px;
+  }
+
   &__slider {
     position: relative;
     margin-top: -100px;
     margin-bottom: 37px;
+    @include lg {
+      margin-top: -70px;
+    }
+    @include md {
+      margin-top: 0;
+    }
+    @include sm {
+      padding-bottom: 45px;
+      margin-bottom: 25px;
+    }
 
     .right {
       right: 0;
+      @include lg {
+        right: 50px;
+      }
+      @include sm {
+        right: 20px;
+      }
+    }
+
+    .left {
+      left: 0;
+      @include lg {
+        left: 50px;
+      }
+      @include sm {
+        left: 20px;
+      }
     }
 
     .slide-btn {
@@ -15,13 +54,38 @@
       z-index: 9;
       top: 50%;
       transform: translateY(-50%);
-
-      i {
-        font-size: 60px;
-        color: #999999;
+      font-size: 60px;
+      color: #999999;
+      @include sm {
+        top: auto;
+        bottom: 0;
+        transform: translateY(0);
+        font-size: 30px;
       }
     }
 
+    .swiper-pagination {
+      display: none;
+      bottom: 0;
+      transform: translateY(-50%);
+      @include sm {
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+      }
+
+      .swiper-pagination-bullet {
+        width: 9px;
+        height: 9px;
+        margin-right: 5px;
+
+        &:last-child {
+          margin-right: 0;
+          //display: inline-block;
+        }
+      }
+    }
   }
 
 
@@ -36,6 +100,14 @@
       border-radius: 10px 10px 5px 5px;
       overflow: hidden;
       z-index: 1;
+      @include lg {
+        padding-left: 70%;
+        padding-bottom: 35%;
+      }
+      @include sm {
+        padding-left: 100%;
+        padding-bottom: 60%;
+      }
 
       iframe {
         position: absolute;
@@ -49,16 +121,33 @@
 }
 
 .list {
+  margin-bottom: 40px;
+  @include lg {
+    margin-bottom: 35px;
+  }
+  @include md {
+    margin-bottom: 30px;
+  }
+  @include sm {
+    margin-bottom: 25px;
+  }
+  @include xs {
+    margin-bottom: 20px;
+  }
+
   &__wrap {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-around;
+    @include sm {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
     border-radius: 10px;
-    background-color: $mainColor;
+    background-color: $maincolor;
     box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.3);
     max-width: 360px;
     width: 100%;
@@ -66,19 +155,48 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: $wc;
-    font-size: 18px;
-    font-weight: 700;
     transition: $transition;
     position: relative;
+    @include md {
+      max-width: 330px;
+      min-height: 110px;
+    }
+    @include sm {
+      margin-bottom: 20px;
+    }
 
-    span {
-      margin-right: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    p {
+      color: $wc;
+      font-size: 18px;
+      font-weight: 700;
+      @include lg {
+        font-size: 17px;
+      }
+      @include md {
+        font-size: 16px;
+      }
+
+      span {
+        margin-right: 30px;
+        @include lg {
+          margin-right: 20px;
+        }
+        @include md {
+          margin-right: 15px;
+        }
+      }
     }
 
     &:hover {
       transform: translateY(-15px);
       box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
+      @include sm {
+        transform: translateY(0);
+      }
     }
   }
 }

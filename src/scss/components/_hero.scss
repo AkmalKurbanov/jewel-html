@@ -1,11 +1,47 @@
 .hero {
   background-size: cover;
   min-height: 470px;
+  padding: 65px 0;
+  @include lg {
+    min-height: 400px;
+    padding: 40px 0;
+  }
+  @include md {
+    min-height: auto;
+    padding: 35px 0;
+  }
+  @include sm {
+    padding: 30px 0;
+  }
+  @include xs {
+    min-height: auto;
+    padding: 25px 0;
+  }
 
   &__text {
     max-width: 650px;
     width: 100%;
     margin-right: 70px;
+    @include lg {
+      margin-right: 30px;
+    }
+    @include md {
+      margin-right: 15px;
+    }
+    @include sm {
+      margin-right: 0;
+    }
+  }
+
+  &__img {
+    max-width: 305px;
+    @include sm {
+      display: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
   }
 
   &__desc {
@@ -16,7 +52,14 @@
       font-size: 18px;
       line-height: 20px;
       margin-bottom: 30px;
+      @include lg {
+        font-size: 17px;
+      }
+      @include md {
+        font-size: 16px;
+      }
     }
+
     .btn {
       padding: 8px 15px;
     }
@@ -27,14 +70,32 @@
     margin-bottom: 20px;
 
     span {
-      color: $secondaryColor;
+      color: $secondarycolor;
       font-size: 30px;
+      @include lg {
+        font-size: 28px;
+      }
+      @include md {
+        font-size: 26px;
+      }
+      @include sm {
+        font-size: 24px;
+      }
+      @include xs {
+        font-size: 22px;
+      }
     }
   }
 
   &__desc-wrapper {
     display: flex;
     flex-direction: row;
-    padding-top: 65px;
+
+    @include lg {
+      justify-content: space-between;
+    }
+    @include sm {
+      flex-direction: column;
+    }
   }
 }

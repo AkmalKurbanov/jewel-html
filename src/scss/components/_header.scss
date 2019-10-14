@@ -1,5 +1,5 @@
 .header {
-  background-color: $mainColor;
+  background-color: $maincolor;
   border-bottom: 3px solid #3c4e89;
 
   .mobile-menu {
@@ -15,14 +15,13 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    @include md {
-      justify-content: space-around;
-    }
-    @include sm {
-      justify-content: space-between;
-    }
 
     .header__nav-wrapper {
+      @include md {
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 40px;
+      }
       @include sm {
         display: none;
       }
@@ -35,6 +34,7 @@
     @include lg {
       max-width: 120px;
     }
+
 
     a {
       display: block;
@@ -54,6 +54,9 @@
 
   .nav {
     padding-right: 80px;
+    @include md {
+      padding: 0;
+    }
 
     ul {
       display: flex;
@@ -99,7 +102,7 @@
 
         a {
           @include sm {
-            color: $secondaryColor;
+            color: $secondarycolor;
           }
         }
       }
@@ -107,7 +110,9 @@
   }
 
   .control-panel {
+
     @include md {
+      display: flex;
       flex-direction: column;
     }
     @include sm {
@@ -134,7 +139,7 @@
 }
 
 .mobile-menu {
-  background-color: rgba($mainColor, 0.9);
+  background-color: rgba($maincolor, 0.9);
   height: 100vh;
   position: absolute;
   left: -100%;

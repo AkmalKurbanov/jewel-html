@@ -15,16 +15,65 @@ h2 {
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
+  @include lg {
+    font-size: 22px;
+  }
+  @include md {
+    font-size: 20px;
+  }
+  @include sm {
+    font-size: 18px;
+  }
+  @include xs {
+    font-size: 17px;
+  }
 }
 
+//title
 .title-wrap {
   text-align: center;
   margin-bottom: 40px;
+  @include lg {
+    margin-bottom: 35px;
+  }
+  @include md {
+    margin-bottom: 30px;
+  }
+  @include sm {
+    margin-bottom: 25px;
+  }
+  @include xs {
+    margin-bottom: 20px;
+  }
 
   .title {
     color: $bc;
   }
+
+  p {
+    font-size: 24px;
+    line-height: 36px;
+    color: $bc;
+    @include lg {
+      font-size: 22px;
+      line-height: 34px;
+    }
+    @include md {
+      font-size: 20px;
+      line-height: 32px;
+    }
+    @include sm {
+      font-size: 18px;
+      line-height: 30px;
+    }
+    @include xs {
+      font-size: 17px;
+      line-height: 29px;
+    }
+  }
 }
+
+//title end
 
 .container {
   width: 100%;
@@ -33,11 +82,14 @@ h2 {
   margin-right: auto;
   margin-left: auto;
   max-width: 1140px;
-  @include md {
+  @include lg {
     max-width: 960px;
   }
-  @include sm {
+  @include md {
     max-width: 720px;
+  }
+  @include sm {
+    max-width: 540px;
   }
   @include xs {
     max-width: 460px;
@@ -65,7 +117,7 @@ ul {
 //btn
 .btn {
   text-transform: uppercase;
-  color: $mainColor;
+  color: $maincolor;
   padding: 5px 20px;
   border-radius: 5px;
   font-weight: 500;
@@ -75,7 +127,7 @@ ul {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid $secondaryColor;
+  border: 3px solid $secondarycolor;
   transition: all .5s;
   line-height: normal;
 
@@ -94,7 +146,7 @@ ul {
     width: 10px;
     height: 10px;
     border-radius: 100%;
-    background-color: $secondaryColor;
+    background-color: $secondarycolor;
     bottom: 100%;
     left: 100%;
     transform: scale(50);
