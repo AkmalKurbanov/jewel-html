@@ -1,0 +1,40 @@
+.hero {
+  background-size: cover;
+  min-height: 470px;
+
+  &__text {
+    max-width: 650px;
+    width: 100%;
+    margin-right: 70px;
+  }
+
+  &__desc {
+    position: relative;
+
+    p {
+      color: $wc;
+      font-size: 18px;
+      line-height: 20px;
+      margin-bottom: 30px;
+    }
+    .btn {
+      padding: 8px 15px;
+    }
+  }
+
+  &__title {
+    color: $wc;
+    margin-bottom: 20px;
+
+    span {
+      color: $secondaryColor;
+      font-size: 30px;
+    }
+  }
+
+  &__desc-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-top: 65px;
+  }
+}

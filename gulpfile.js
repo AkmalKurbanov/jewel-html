@@ -12,86 +12,90 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 
 gulp.task('scss', function () {
-   return gulp.src('src/scss/**/*.scss')
-      .pipe(plumber({
-         errorHandler: function (err) {
-            // Сообщение об ошибке
-            console.log(err);
-            // Сообщение об ошибке
-            this.emit('end')
-         }
-      }))
-      .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: 'expand' }))
-      .pipe(rename({ suffix: '.min', prefix: '' }))
-      .pipe(autoprefixer({
-         browsers: ['last 10 versions'],
-      }))
-      .pipe(cssmin())
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/assets'))
-      .pipe(browsersync.reload({ stream: true }))
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(plumber({
+            errorHandler: function (err) {
+                // Сообщение об ошибке
+                console.log(err);
+                // Сообщение об ошибке
+                this.emit('end')
+            }
+        }))
+        .pipe(sourcemaps.init())
+        .pipe(sass({outputStyle: 'expand'}))
+        .pipe(rename({suffix: '.min', prefix: ''}))
+        .pipe(autoprefixer({
+            browsers: ['last 10 versions'],
+        }))
+        .pipe(cssmin())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('dist/assets'))
+        .pipe(browsersync.reload({
+            stream: true,
+        }))
 });
 
 gulp.task('html', function () {
-   gulp.src(['src/**/*.html'])
-      .pipe(htmlPartial({
-         basePath: 'src/parts/',
-         tagName: 'part',
-         variablePrefix: '@@'
-      }))
-      .pipe(gulp.dest('dist'));
+    gulp.src(['src/**/*.html'])
+        .pipe(htmlPartial({
+            basePath: 'src/parts/',
+            tagName: 'part',
+            variablePrefix: '@@'
+        }))
+        .pipe(gulp.dest('dist'));
 });
 
 
 gulp.task('browser-sync', function () {
-   browsersync({
-      server: {
-         baseDir: 'dist'
-      },
-   })
+    browsersync({
+        server: {
+            baseDir: 'dist'
+        },
+        notify: false
+    })
 });
 
 gulp.task('assets', function () {
-   gulp.src('./src/assets/**/*.*')
-      .pipe(gulp.dest('./dist/assets/'));
+    gulp.src('./src/assets/**/*.*')
+        .pipe(gulp.dest('./dist/assets/'));
 });
 
 gulp.task('js', function () {
-   return gulp
-      .src([
-         'node_modules/jquery/dist/jquery.js',
-         'src/js/scripts/*.js'
-      ])
-      .pipe(plumber({
-         errorHandler: function (err) {
-            // Сообщение об ошибке
-            console.log(err);
-            // Сообщение об ошибке
-            this.emit('end')
-         }
-      }))
-      .pipe(concat('scripts.min.js'))
-      .pipe(babel({
-          presets: [['env', {
-              loose: true,
-              modules: false,
-              exclude: ['transform-es2015-typeof-symbol']
-          }]],
-          plugins: ['transform-object-rest-spread']
-      }))
-      .pipe(uglify())
-      .pipe(sourcemaps.write('.'))
-      .pipe(gulp.dest('dist/assets'))
-      .pipe(browsersync.reload({ stream: true }))
+    return gulp
+        .src([
+            'node_modules/jquery/dist/jquery.js',
+            'node_modules/swiper/js/swiper.min.js',
+            'src/js/scripts/*.js'
+        ])
+        .pipe(plumber({
+            errorHandler: function (err) {
+                // Сообщение об ошибке
+                console.log(err);
+                // Сообщение об ошибке
+                this.emit('end')
+            }
+        }))
+        .pipe(concat('scripts.min.js'))
+        .pipe(babel({
+            presets: [['env', {
+                loose: true,
+                modules: false,
+                exclude: ['transform-es2015-typeof-symbol']
+            }]],
+            plugins: ['transform-object-rest-spread']
+        }))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
+        .pipe(gulp.dest('dist/assets'))
+        .pipe(browsersync.reload({stream: true}))
 });
 
 
 gulp.task('watch', ['scss', 'browser-sync', 'html', 'js', 'assets'], function () {
-   gulp.watch('src/scss/**/*.scss', ['scss', browsersync.reload]);
-   gulp.watch('src/assets/**/*.*', ['assets', browsersync.reload]);
-   gulp.watch('src/js/**/*.js', ['js']);
-   gulp.watch('src/**/*.html', ['html', browsersync.reload])
+    gulp.watch('src/scss/**/*.scss', ['scss', browsersync.reload]);
+    gulp.watch('src/assets/**/*.*', ['assets', browsersync.reload]);
+    gulp.watch('src/js/**/*.js', ['js']);
+    gulp.watch('src/**/*.html', ['html', browsersync.reload])
 });
 
 gulp.task('build', ['scss', 'html', 'js', 'assets']);

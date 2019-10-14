@@ -1,0 +1,127 @@
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.title-wrap {
+  text-align: center;
+  margin-bottom: 40px;
+
+  .title {
+    color: $bc;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  @include md {
+    max-width: 960px;
+  }
+  @include sm {
+    max-width: 720px;
+  }
+  @include xs {
+    max-width: 460px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style: none;
+
+    a {
+      transition: $transition;
+      text-decoration: none;
+    }
+  }
+}
+
+//btn
+.btn {
+  text-transform: uppercase;
+  color: $mainColor;
+  padding: 5px 20px;
+  border-radius: 5px;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid $secondaryColor;
+  transition: all .5s;
+  line-height: normal;
+
+  &:hover {
+    color: $wc;
+
+    &:after {
+      bottom: 100%;
+      transform: scale(0);
+    }
+  }
+
+  &:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    background-color: $secondaryColor;
+    bottom: 100%;
+    left: 100%;
+    transform: scale(50);
+    transition: all .5s;
+    z-index: -1;
+  }
+
+  &--other-btn {
+    background-color: transparent;
+    color: $wc;
+    padding: 7px 10px;
+
+
+    &:after {
+      transform: scale(0);
+      top: 100%;
+      left: 100%;
+    }
+
+    &:hover {
+      &:after {
+        transform: scale(50);
+      }
+    }
+  }
+
+
+}
+
+//btn end

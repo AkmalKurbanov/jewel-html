@@ -1,7 +1,7 @@
 @import "mixins/fontface";
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont");
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont",normal);
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont",normal, italic);
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont",bold);
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont",bold, italic);
-// @include font-face("NameFont", "../assets/fonts/NameFont/NameFont",400, italic);
+
+@include font-face("Montserrat", "../assets/fonts/Montserrat-Regular", 400);
+@include font-face("Montserrat", "../assets/fonts/Montserrat-Medium", 500);
+@include font-face("Montserrat", "../assets/fonts/Montserrat-SemiBold", 600);
+@include font-face("Montserrat", "../assets/fonts/Montserrat-Bold", 700);
+@include font-face("Montserrat", "../assets/fonts/Montserrat-ExtraBold", 800);

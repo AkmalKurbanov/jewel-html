@@ -1,0 +1,168 @@
+.header {
+  background-color: $mainColor;
+  border-bottom: 3px solid #3c4e89;
+
+  .mobile-menu {
+    display: none;
+    @include sm {
+      display: block;
+    }
+  }
+
+  &__flex-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    @include md {
+      justify-content: space-around;
+    }
+    @include sm {
+      justify-content: space-between;
+    }
+
+    .header__nav-wrapper {
+      @include sm {
+        display: none;
+      }
+    }
+  }
+
+  &__logo {
+    max-width: 150px;
+
+    @include lg {
+      max-width: 120px;
+    }
+
+    a {
+      display: block;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav {
+    padding-right: 80px;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      @include sm {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+
+    &__item {
+
+      a {
+        text-transform: uppercase;
+        color: $wc;
+        font-weight: 400;
+        padding: 0 15px;
+        min-height: 112px;
+        display: flex;
+        align-items: center;
+        @include lg {
+          min-height: 100px;
+          font-size: 15px;
+          padding: 0 10px;
+        }
+        @include md {
+          font-size: 14px;
+          padding: 0 5px;
+        }
+        @include sm {
+          justify-content: center;
+          min-height: auto;
+          padding: 10px 0;
+        }
+
+        &:hover {
+          background-color: #1b245b;
+        }
+      }
+
+      &--active {
+        background-color: #1b245b;
+
+        a {
+          @include sm {
+            color: $secondaryColor;
+          }
+        }
+      }
+    }
+  }
+
+  .control-panel {
+    @include md {
+      flex-direction: column;
+    }
+    @include sm {
+      display: none;
+    }
+
+    .btn {
+      @include lg {
+        font-size: 15px;
+      }
+      @include md {
+        font-size: 14px;
+      }
+
+      &--other-btn {
+        margin-right: 11px;
+        @include md {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+.mobile-menu {
+  background-color: rgba($mainColor, 0.9);
+  height: 100vh;
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  width: 100%;
+  transition: $transition;
+  z-index: 9;
+
+  .header__nav-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 0;
+  }
+
+  .control-panel {
+    display: flex;
+    padding-top: 20px;
+  }
+}
+
+.open-menu {
+  left: 0;
+  transition: $transition;
+}

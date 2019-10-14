@@ -1,0 +1,58 @@
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 43px;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+  @include sm {
+    display: block;
+  }
+
+  i {
+    width: 30px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: $secondaryColor;
+    display: block;
+    transition: $transition;
+    position: absolute;
+    transition: all .5s;
+
+    &:first-child {
+      top: 7px;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      left: 0;
+    }
+
+    &:last-child {
+      bottom: 5px;
+    }
+  }
+}
+
+.hamburger-open {
+
+  i {
+
+    &:first-child {
+      transform: translateY(-50%) rotate(45deg);
+      top: 50%;
+    }
+
+    &:nth-child(2) {
+      width: 0;
+    }
+
+    &:last-child {
+      transform: translateY(-50%) rotate(-45deg);
+      top: 50%;
+    }
+  }
+}
