@@ -1,10 +1,14 @@
 .caption {
-  min-height: 180px;
-  padding: 30px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-size: cover;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 180px;
+    padding: 30px 0;
+  }
 
   &__title {
     text-transform: uppercase;
@@ -13,13 +17,35 @@
     font-weight: 600;
     line-height: 36px;
     font-size: 24px;
+    @include lg {
+      line-height: 32px;
+      font-size: 22px;
+    }
+    @include md {
+      line-height: 26px;
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    @include xs {
+      font-size: 13px;
+      line-height: 22px;
+    }
+
     span {
       display: block;
       color: $secondarycolor;
       line-height: normal;
+
       small {
         text-transform: lowercase;
       }
     }
+  }
+
+  .btn {
+    margin-top: 10px;
   }
 }
