@@ -29,6 +29,19 @@ h2 {
   }
 }
 
+p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $maincolor;
+  @include lg {
+    font-size: 17px;
+  }
+  @include md {
+    font-size: 16px;
+  }
+}
+
 //title
 .title-wrap {
   text-align: center;
@@ -48,6 +61,18 @@ h2 {
 
   .title {
     color: $bc;
+
+    &--other {
+      color: $maincolor;
+      margin-bottom: 30px;
+      @include lg {
+        margin-bottom: 25px;
+      }
+      @include md {
+        margin-bottom: 15px;
+      }
+
+    }
   }
 
   p {

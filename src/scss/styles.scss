@@ -5,6 +5,8 @@
 // @import "../../node_modules/--/--/";
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/swiper/css/swiper.min.css";
+@import "../../node_modules/intl-tel-input/build/css/intlTelInput.min.css";
+
 //---------------------------------------------
 // подключение сгенерированных иконок(fontello),
 // FontAwesome
@@ -28,4 +30,7 @@
 @import "components/caption";
 @import "components/counter";
 @import "components/advantages";
+@import "components/additional-info";
 @import "components/footer";
+@import "components/registartion";
+@import "components/form-group";

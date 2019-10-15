@@ -1,19 +1,18 @@
 .detailed {
-  .title {
-    color: $maincolor;
-    margin-bottom: 30px;
-    @include lg {
-      margin-bottom: 25px;
-    }
-    @include md {
-      margin-bottom: 15px;
-    }
-
-  }
-
-
   .list {
     margin-bottom: 70px;
+    @include lg {
+      margin-bottom: 50px;
+    }
+    @include md {
+      margin-bottom: 40px;
+    }
+    @include sm {
+      margin-bottom: 30px;
+    }
+    @include xs {
+      margin-bottom: 25px;
+    }
 
     &__wrap {
       justify-content: space-between;
@@ -43,7 +42,6 @@
       p {
         color: #6c6b6b;
         font-weight: 500;
-        line-height: 24px;
         @include lg {
           font-size: 15px;
         }

@@ -1,0 +1,103 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+  label {
+    color: #878787;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.3;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
+  }
+
+
+  .form-control {
+    border: 1px solid #bababa;
+    border-radius: 3px;
+    height: 35px;
+    padding: 0 10px;
+    outline: none;
+    font-size: 14px;
+    max-width: 290px;
+    width: 100%;
+
+    &[type="password"] {
+      font-size: 16px;
+      font-weight: 900;
+    }
+  }
+}
+
+.agree {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+
+  label {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 30px;
+    cursor: pointer;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      cursor: pointer;
+    }
+
+    &:before {
+      z-index: 1;
+      width: 15px;
+      height: 7px;
+      border: 2px solid $auxiliary;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      left: 3px;
+      top: 4.5px;
+      opacity: 0;
+    }
+
+    &:after {
+      border: 1px solid #bababa;
+      transition: $transition;
+      width: 20px;
+      height: 20px;
+      left: 0;
+    }
+  }
+
+  input {
+    opacity: 0;
+    position: absolute;
+    &:checked + label:before {
+      opacity: 1;
+    }
+  }
+}
+
+.iti__flag {
+  background-image: url("../assets/img/flags/flags.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../assets/img/flags/flags@2x.png");
+  }
+}
+
+.iti .iti--allow-dropdown {
+  width: 100%;
+  max-width: 100%;
+}

@@ -10,7 +10,6 @@ var swiper = new Swiper('.slider', {
         el: '.swiper-pagination',
         clickable: true,
     },
-    breakpoints: {
-        575: {}
-    }
 });
+
+
