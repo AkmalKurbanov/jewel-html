@@ -143,11 +143,12 @@
   height: 100vh;
   position: absolute;
   left: -100%;
+  top: 0;
   bottom: 0;
   width: 100%;
   transition: $transition;
   z-index: 9;
-
+  -webkit-overflow-scrolling: touch;
   .header__nav-wrapper {
     display: flex;
     align-items: center;

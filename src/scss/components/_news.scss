@@ -1,0 +1,204 @@
+.news {
+  padding: 70px 0;
+  @include lg {
+    padding: 50px 0;
+  }
+  @include md {
+    padding: 40px 0;
+  }
+  @include sm {
+    padding: 30px 0;
+  }
+  @include xs {
+    padding: 25px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    flex-basis: 31.6%;
+    margin-bottom: 40px;
+    @include lg {
+      margin-bottom: 35px;
+    }
+    @include md {
+      flex-basis: 47.8%;
+      margin-bottom: 30px;
+    }
+    @include sm {
+      margin-bottom: 25px;
+    }
+    @include xs {
+      flex-basis: 100%;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: 30px;
+      border-bottom: 1px solid $maincolor;
+    }
+    @media (max-width: 359.98px) {
+      margin-bottom: 25px;
+      display: block;
+      border: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      border: none;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__img {
+    margin-bottom: 30px;
+    @include lg {
+      margin-bottom: 25px;
+    }
+    @include sm {
+      margin-bottom: 20px;
+    }
+    @include xs {
+      max-width: 35%;
+      margin-right: 15px;
+    }
+    @media (max-width: 359.98px) {
+      margin-bottom: 20px;
+      margin-right: 0;
+      max-width: 100%;
+    }
+  }
+
+  &__promo,
+  &__promo-summary {
+    font-size: 18px;
+    color: $maincolor;
+    font-weight: 500;
+    @include lg {
+      font-size: 17px;
+    }
+    @include sm {
+      font-size: 15px;
+      line-height: 22px;
+    }
+    @include xs {
+      font-size: 13px;
+      line-height: 18px;
+    }
+    @media (max-width: 359.98px) {
+      font-size: 15px;
+      line-height: 22px;
+    }
+  }
+
+
+  &__proho-heading {
+    margin-bottom: 20px;
+    display: block;
+    text-decoration: underline;
+    @include lg {
+      margin-bottom: 15px;
+    }
+    @include sm {
+      margin-bottom: 10px;
+    }
+    @include xs {
+      margin-bottom: 5px;
+    }
+    @media (max-width: 359.98px) {
+      margin-bottom: 10px;
+    }
+  }
+
+
+  &__proho-heading {
+    transition: $transition;
+    color: $maincolor;
+
+    &:hover {
+      color: $secondarycolor;
+    }
+  }
+
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    @include sm {
+      margin-top: 15px;
+    }
+    @include xs {
+      margin-top: 10px;
+    }
+    @media (max-width: 359.98px) {
+      margin-top: 15px;
+    }
+  }
+
+  &__liked-counter {
+    a {
+      color: $maincolor;
+      font-size: 16px;
+      transition: $transition;
+      @include md {
+        font-size: 15px;
+      }
+      @include sm {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: $secondarycolor;
+      }
+    }
+  }
+
+  &__like-quantity {
+    color: $maincolor;
+    font-weight: 700;
+    font-size: 18px;
+    @include lg {
+      font-size: 17px;
+    }
+    @include sm {
+      font-size: 12px;
+    }
+  }
+
+  &__link-more {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 9px 32px;
+    border-radius: 0;
+    @include lg {
+      font-size: 14px;
+      padding: 9px 25px;
+    }
+    @include sm {
+      font-size: 12px;
+      padding: 9px 15px;
+    }
+
+    @include xs {
+      font-size: 11px;
+      padding: 5px 7px;
+    }
+    @media (max-width: 359.98px) {
+      font-size: 12px;
+      padding: 9px 15px;
+    }
+
+    &:hover {
+      color: $maincolor;
+    }
+  }
+}
