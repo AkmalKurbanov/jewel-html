@@ -1,0 +1,231 @@
+.marketing {
+  .status-desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    &__item {
+      flex-basis: 26%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      min-height: 270px;
+      @include lg {
+        min-height: 250px;
+        flex-basis: 26%;
+      }
+      @include md {
+        min-height: 220px;
+      }
+      @include sm {
+        flex-basis: 33%;
+      }
+      @include xs {
+        flex-basis: 43%;
+      }
+      @media (max-width: 439.98px) {
+        flex-basis: 100%;
+      }
+    }
+
+    &__link {
+      border-radius: 10px;
+      border: 1px solid #a4a4a4;
+      transition: $transition;
+      max-width: 225px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 215px;
+      padding: 25px;
+      text-align: center;
+      font-size: 24px;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      @include lg {
+        font-size: 20px;
+        max-width: 200px;
+        min-height: 200px;
+      }
+      @include md {
+        max-width: 160px;
+        font-size: 16px;
+        min-height: 180px;
+      }
+      @include sm {
+        padding: 10px;
+      }
+      @media (max-width: 439.98px) {
+        min-height: 210px;
+      }
+
+
+      &:hover {
+        border-color: $secondarycolor;
+        box-shadow: -17px 0 40px 0px rgba($bc, .4);
+        min-height: 260px;
+        @include lg {
+          font-size: 20px;
+          max-width: 200px;
+          min-height: 230px;
+        }
+        @include md {
+          max-width: 160px;
+          font-size: 16px;
+          min-height: 210px;
+          box-shadow: -10px 0 20px 0px rgba($bc, .4);
+        }
+        @include sm {
+          box-shadow: -5px 0 10px 0px rgba($bc, .3);
+        }
+
+        .status-desc__deposit {
+          bottom: 30px;
+          @include lg {
+            bottom: 20px;
+          }
+        }
+
+        .status-desc__info {
+          transform: translateY(-40px);
+          @include lg {
+            transform: translateY(-30px);
+          }
+        }
+
+        .status-desc__img {
+          &:before {
+            transform: translate(-50%, -75%) scale(1);
+          }
+        }
+      }
+
+      &--active {
+        border-color: $secondarycolor;
+        box-shadow: -17px 0 40px 0px rgba($bc, .4);
+        min-height: 260px;
+        @include lg {
+          font-size: 20px;
+          max-width: 200px;
+          min-height: 230px;
+        }
+        @include md {
+          max-width: 160px;
+          font-size: 16px;
+          min-height: 210px;
+          box-shadow: -10px 0 20px 0px rgba($bc, .4);
+        }
+        @include sm {
+          box-shadow: -5px 0 10px 0px rgba($bc, .3);
+        }
+
+
+        .status-desc__deposit {
+          bottom: 30px;
+          @include lg {
+            bottom: 20px;
+          }
+        }
+
+        .status-desc__info {
+          transform: translateY(-40px);
+          @include lg {
+            transform: translateY(-30px);
+          }
+        }
+
+        .status-desc__img {
+          &:before {
+            transform: translate(-50%, -75%) scale(1);
+          }
+        }
+      }
+    }
+
+    &__info {
+      transition: $transition;
+      @media (max-width: 439.98px) {
+       transform: translateY(-30px);
+      }
+    }
+
+    &__img {
+      max-width: 100px;
+      width: 100%;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 10px;
+      position: relative;
+      @include lg {
+        margin: 0 auto 15px;
+        max-width: 90px;
+      }
+      @include md {
+        max-width: 80px;
+        margin: 0 auto 10px;
+      }
+
+      &:before {
+        position: absolute;
+        content: '';
+        width: 175px;
+        height: 175px;
+        border-radius: 100%;
+        background-color: #f4f4f4;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -75%) scale(0);
+        transition: all .2s;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    &__name {
+      color: $bc;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    &__deposit {
+      transition: $transition;
+      bottom: -100%;
+      position: absolute;
+      @media (max-width: 439.98px) {
+        bottom: 20px;
+      }
+
+      p {
+        font-size: 34px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 15px;
+        @include lg {
+          font-size: 24px;
+          max-width: 200px;
+          margin-top: 7px;
+        }
+        @include md {
+          font-size: 20px;
+          max-width: 200px;
+          margin-top: 7px;
+        }
+      }
+
+      p, span {
+        color: #a09c9c;
+      }
+    }
+  }
+}
