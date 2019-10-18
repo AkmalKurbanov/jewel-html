@@ -69,6 +69,7 @@ gulp.task('js', function () {
             // 'node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js',
             'node_modules/intl-tel-input/build/js//intlTelInput.js',
             'node_modules/intl-tel-input/build/js/utils.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'src/js/scripts/*.js'
         ])
         .pipe(plumber({

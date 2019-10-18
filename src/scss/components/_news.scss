@@ -1,4 +1,17 @@
 .news {
+  padding: 70px 0;
+  @include lg {
+    padding: 50px 0;
+  }
+  @include md {
+    padding: 40px 0;
+  }
+  @include sm {
+    padding: 30px 0;
+  }
+  @include xs {
+    padding: 25px 0;
+  }
   &__wrap {
     display: flex;
     flex-wrap: wrap;

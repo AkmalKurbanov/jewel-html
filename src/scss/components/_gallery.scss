@@ -1,0 +1,14 @@
+.gallery {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: 33.33%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}

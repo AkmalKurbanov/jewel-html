@@ -4,6 +4,7 @@
   "description": "Project",
   "main": "index.js",
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "easy-pie-chart": "^2.1.7",
     "intl-tel-input": "16.0.1",
     "jquery": "^3.4.1",
