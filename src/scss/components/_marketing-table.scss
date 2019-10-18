@@ -1,30 +1,97 @@
 .table {
   margin-top: 30px;
   margin-bottom: 50px;
+  @include lg {
+    margin-bottom: 40px;
+  }
+  @include md {
+    margin-bottom: 30px;
+  }
+  @include sm {
+    margin-bottom: 25px;
+  }
+
+  th, td {
+    background-color: $maincolor;
+    color: $wc;
+    text-align: center;
+    padding: 20px 10px;
+    font-weight: 700;
+    font-size: 18px;
+    @include lg {
+      font-size: 16px;
+      padding: 7px 10px;
+    }
+    @include md {
+      display: block;
+      width: 100%;
+      padding: 5px;
+    }
+  }
 
   table {
     width: 100%;
 
-    td {
-      background-color: $maincolor;
-      color: $wc;
-      text-align: center;
-      padding: 20px 10px;
-      font-weight: 700;
-      font-size: 18px;
+
+
+    td[data-header-title]:before {
+      @include md {
+        content: attr(data-header-title) ':';
+        color: $wc;
+      }
+    }
+
+    thead {
+      @include md {
+        display: none;
+      }
+    }
+
+    tbody {
+      @include md {
+        display: block;
+      }
+
+      tr {
+        @include md {
+          display: flex;
+          flex-direction: column;
+        }
+
+
+        td {
+          @include md {
+            margin-bottom: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 10px;
+          }
+
+          &:nth-of-type(odd) {
+            @include md {
+              background: rgba($maincolor, .4);
+            }
+          }
+        }
+
+
+      }
     }
   }
 
   &--package-services-table {
     margin-bottom: 0;
     table {
-      td {
+      th,td {
         padding: 7px 10px;
         font-weight: 500;
         font-size: 16px;
       }
     }
   }
+
+
 }
 
 .status-info {
@@ -40,3 +107,5 @@
     }
   }
 }
+
+
