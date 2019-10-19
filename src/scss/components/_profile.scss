@@ -1,0 +1,11 @@
+.profile {
+  height: 100vh;
+
+  &__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+}

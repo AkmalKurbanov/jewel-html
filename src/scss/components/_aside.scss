@@ -1,0 +1,19 @@
+.side-bar {
+  max-width: 290px;
+  width: 100%;
+  background-color: $maincolor;
+  padding: 15px 30px;
+
+  &__logo {
+    max-width: 130px;
+    width: 100%;
+    margin: 0 auto 0 30px;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__user-info-section {
+
+  }
+}
