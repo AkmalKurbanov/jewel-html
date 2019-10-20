@@ -85,13 +85,5 @@
         }
       }
     }
-
-    &:hover {
-      transform: translateY(-15px);
-      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
-      @include sm {
-        transform: translateY(0);
-      }
-    }
   }
 }

@@ -3,5 +3,142 @@
   width: 100%;
   max-width: 100%;
 
+  .header {
+    &--pr-header {
+      background-color: $maincolor;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      border: none;
+      padding-right: 40px;
 
+      .nav {
+        padding-right: 56px;
+      }
+    }
+  }
+
+  .pr {
+    &-profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      a {
+        display: block;
+      }
+    }
+
+    &-avatar-choose {
+      position: absolute;
+      display: block;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      cursor: pointer;
+    }
+
+    &-avatar {
+      width: 38px;
+      height: 38px;
+      background-color: $wc;
+      border-radius: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 14px;
+
+      input {
+        display: none;
+        z-index: -1;
+      }
+    }
+
+    &-img {
+      width: 80%;
+    }
+
+    &-user-name {
+      color: $wc;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-family: 'Myriad Pro';
+    }
+
+    &-navbar {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-input-search {
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-right: 115px;
+
+      button {
+        border: none;
+        outline: none;
+        position: absolute;
+        background-color: transparent;
+        cursor: pointer;
+        left: 15px;
+        font-size: 13px;
+      }
+
+      input {
+        max-width: 192px;
+        width: 100%;
+        min-height: 38px;
+        border-radius: 30px;
+        overflow: hidden;
+        outline: none;
+        border: none;
+        padding-left: 35px;
+        padding-right: 10px;
+        color: #777777;
+        font-family: 'FavoritC';
+      }
+    }
+
+    &-settings {
+      width: 38px;
+      height: 38px;
+      background-color: $secondarycolor;
+      border-radius: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: $transition;
+
+      &:hover {
+        animation: rotating 2s linear infinite;
+
+        i {
+          @keyframes rotating {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(360deg);
+            }
+          }
+        }
+      }
+
+      i {
+        font-size: 20px;
+        transition: $transition;
+        position: absolute;
+      }
+    }
+  }
 }

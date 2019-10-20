@@ -6,13 +6,11 @@
 @import "../../node_modules/normalize.css/normalize.css";
 @import "../../node_modules/swiper/css/swiper.min.css";
 @import "../../node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.css";
-
-
 //---------------------------------------------
 // подключение сгенерированных иконок(fontello),
 // FontAwesome
-@import "../assets/icons/fontawesome5/web-fonts-with-css/css/fontawesome.min.css";
- @import "../assets/icons/fontello/css/icon.css";
+//@import "../assets/icons/fontawesome5/css/fontawesome.css";
+@import "../assets/icons/fontello/css/icon.css";
 //---------------------------------------------
 // подключение css файлов
 @import "fonts";
@@ -45,3 +43,4 @@
 @import "components/gallery";
 @import "components/aside";
 @import "components/main";
+@import "components/accordion";
