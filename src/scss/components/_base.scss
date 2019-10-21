@@ -173,7 +173,7 @@ ul {
   border: 3px solid $secondarycolor;
   transition: all .5s;
   line-height: normal;
-
+  background-color: transparent;
   &:hover {
     color: $wc;
 
@@ -236,7 +236,11 @@ ul {
     }
   }
 
-
+&--light-bg {
+  &:hover {
+    color: $maincolor;
+  }
+}
 }
 
 //btn end

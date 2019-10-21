@@ -1,0 +1,135 @@
+.pr {
+  &-user-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      height: 13px;
+      width: 100%;
+      background-color: $maincolor;
+    }
+
+    &-item {
+      background-color: $maincolor;
+      position: relative;
+      box-shadow: 0 0 30px 10px rgba($bc, .3);
+      max-width: 371px;
+      width: 100%;
+      min-height: 170px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 30px;
+      padding-right: 20px;
+
+      &:before, &:after {
+        position: absolute;
+        content: '';
+        border-radius: 100%;
+      }
+
+      &:before {
+        width: 100px;
+        height: 100px;
+        left: -50px;
+        bottom: 0;
+      }
+
+      &:after {
+        width: 70px;
+        height: 70px;
+        bottom: 7px;
+        left: 20px;
+      }
+
+      &--balance {
+        &:before {
+          background-color: rgba(#5b3986, .7);
+        }
+
+        &:after {
+          background-color: rgba(#5b3986, .7);
+        }
+      }
+
+      &--wallet {
+        &:before {
+          background-color: rgba(#69385f, .7);
+        }
+
+        &:after {
+          background-color: rgba(#69385f, .7);
+        }
+      }
+
+      &--wallet {
+        &:before {
+          background-color: rgba(#69385f, .7);
+        }
+
+        &:after {
+          background-color: rgba(#69385f, .7);
+        }
+      }
+
+      &--referral-link {
+        &:before {
+          background-color: rgba(#1f5c70, .7);
+        }
+
+        &:after {
+          background-color: rgba(#1f5c70, .7);
+        }
+      }
+    }
+
+    &-amount {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-right: 15px;
+      p, span {
+        color: $wc;
+        text-transform: uppercase;
+        font-family: 'Favorit';
+      }
+
+      a {
+        font-family: 'Favorit';
+        color: $wc;
+        margin-bottom: 15px;
+        transition: $transition;
+
+        &:hover {
+          color: $secondarycolor;
+        }
+      }
+
+      p {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+
+      span {
+        font-size: 15px;
+      }
+    }
+
+    &-img {
+      max-width: 130px;
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -33,7 +33,6 @@
     width: 100%;
 
 
-
     td[data-header-title]:before {
       @include md {
         content: attr(data-header-title) ':';
@@ -74,16 +73,15 @@
             }
           }
         }
-
-
       }
     }
   }
 
   &--package-services-table {
     margin-bottom: 0;
+
     table {
-      th,td {
+      th, td {
         padding: 7px 10px;
         font-weight: 500;
         font-size: 16px;
@@ -91,6 +89,18 @@
     }
   }
 
+  &-history {
+    table {
+      border-collapse: collapse;
+
+      th, td {
+        border-bottom: 1px solid $wc;
+        padding: 20px 0;
+        font-weight: 500;
+        font-size: 17px;
+      }
+    }
+  }
 
 }
 
@@ -108,4 +118,37 @@
   }
 }
 
+.history {
+  max-width: 900px;
+  width: 100%;
+
+  &__financial-position {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      color: $wc;
+    }
+
+    span {
+      color: $bc;
+      font-size: 18px;
+      font-weight: 700;
+      max-width: 280px;
+      width: 100%;
+      min-height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 5px;
+      background-color: $secondarycolor;
+    }
+  }
+
+  &-position {
+    display: none;
+  }
+}
 
