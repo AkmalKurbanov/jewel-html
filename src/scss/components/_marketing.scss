@@ -1,4 +1,14 @@
 .marketing {
+  padding: 50px 0;
+  @include md {
+    padding: 40px 0;
+  }
+  @include sm {
+    padding: 30px 0;
+  }
+  @include xs {
+    padding: 25px 0;
+  }
   .status-desc {
     display: flex;
     flex-wrap: wrap;
@@ -22,11 +32,11 @@
         flex-basis: 33%;
       }
       @include xs {
-        flex-basis: 43%;
+        flex-basis: 50%;
       }
-      @media (max-width: 439.98px) {
-        flex-basis: 100%;
-      }
+      //@media (max-width: 439.98px) {
+      //  flex-basis: 100%;
+      //}
     }
 
     &__link {
@@ -61,8 +71,10 @@
       @include sm {
         padding: 10px;
       }
-      @media (max-width: 439.98px) {
-        min-height: 210px;
+
+      @include xs {
+        max-width: 125px;
+        font-size: 13px;
       }
 
 
@@ -83,6 +95,11 @@
         }
         @include sm {
           box-shadow: -5px 0 10px 0px rgba($bc, .3);
+        }
+        @include xs {
+          max-width: 125px;
+          font-size: 13px;
+          min-height: 200px;
         }
 
         .status-desc__deposit {
@@ -124,7 +141,11 @@
         @include sm {
           box-shadow: -5px 0 10px 0px rgba($bc, .3);
         }
-
+        @include xs {
+          max-width: 125px;
+          font-size: 13px;
+          min-height: 200px;
+        }
 
         .status-desc__deposit {
           bottom: 30px;
@@ -171,6 +192,9 @@
       @include md {
         max-width: 80px;
         margin: 0 auto 10px;
+      }
+      @include xs {
+        max-width: 60px;
       }
 
       &:before {
@@ -221,6 +245,9 @@
           max-width: 200px;
           margin-top: 7px;
         }
+        @include xs {
+          font-size: 16px;
+        }
       }
 
       p, span {
@@ -233,6 +260,15 @@
 
 .status-info {
   padding-top: 40px;
+  @include lg {
+    padding-top: 35px;
+  }
+  @include md {
+    padding-top: 30px;
+  }
+  @include xs {
+    padding-top: 25px;
+  }
 }
 
 .specially-offer {

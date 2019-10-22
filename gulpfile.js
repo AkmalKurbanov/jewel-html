@@ -64,12 +64,9 @@ gulp.task('js', function () {
     return gulp
         .src([
             'node_modules/jquery/dist/jquery.js',
+            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'node_modules/swiper/js/swiper.min.js',
             'node_modules/easy-pie-chart/dist/jquery.easypiechart.min.js',
-            // 'node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js',
-            'node_modules/intl-tel-input/build/js//intlTelInput.js',
-            'node_modules/intl-tel-input/build/js/utils.js',
-            'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'src/js/scripts/*.js'
         ])
         .pipe(plumber({

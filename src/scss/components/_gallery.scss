@@ -34,6 +34,9 @@
         &:before, &:after {
           opacity: 1;
         }
+        &:after {
+          transform: scale(1.3);
+        }
 
         img {
           transform: rotate(4deg) scale(1.2);
@@ -56,7 +59,11 @@
       }
 
       &:after {
-        content: '';
+        content: '\f002';
+        font-family: "Font Awesome 5 Pro";
+        color: $wc;
+        font-size: 20px;
+        transform: scale(3);
       }
     }
 

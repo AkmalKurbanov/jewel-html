@@ -26,6 +26,17 @@
       display: block;
       width: 100%;
       padding: 5px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    @include sm {
+      font-size: 13px;
+      font-weight: 400;
+    }
+    @include xs {
+      font-size: 11px;
+      font-weight: 400;
     }
   }
 
@@ -85,11 +96,24 @@
         padding: 7px 10px;
         font-weight: 500;
         font-size: 16px;
+        @include md {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        @include sm {
+          font-size: 13px;
+          font-weight: 400;
+        }
+        @include xs {
+          font-size: 11px;
+          font-weight: 400;
+        }
       }
     }
   }
 
   &-history {
+
     table {
       border-collapse: collapse;
 
@@ -98,6 +122,18 @@
         padding: 20px 0;
         font-weight: 500;
         font-size: 17px;
+        @include md {
+          font-size: 15px;
+          font-weight: 500;
+        }
+        @include sm {
+          font-size: 13px;
+          font-weight: 400;
+        }
+        @include xs {
+          font-size: 11px;
+          font-weight: 400;
+        }
       }
     }
   }
@@ -121,7 +157,7 @@
 .history {
   max-width: 900px;
   width: 100%;
-
+  display: none;
   &__financial-position {
     display: flex;
     flex-direction: row;

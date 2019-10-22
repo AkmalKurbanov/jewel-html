@@ -174,6 +174,7 @@ ul {
   transition: all .5s;
   line-height: normal;
   background-color: transparent;
+
   &:hover {
     color: $wc;
 
@@ -226,6 +227,7 @@ ul {
     width: 100%;
     outline: none;
     cursor: pointer;
+    margin-top: 20px;
 
     &:after {
       width: 20px;
@@ -236,11 +238,13 @@ ul {
     }
   }
 
-&--light-bg {
-  &:hover {
-    color: $maincolor;
+  &--light-bg {
+    font-weight: 700;
+
+    &:hover {
+      color: $maincolor;
+    }
   }
-}
 }
 
 //btn end
@@ -256,5 +260,54 @@ ul {
 //scroll end
 
 
+//social
+.social {
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
+    li {
+      width: 35px;
+      height: 35px;
 
+      &:hover {
+        a {
+          //background-color: $maincolor;
+          animation: pulse-shadow 1s ease;
+        }
+      }
+
+      a {
+        border-radius: 100%;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        transition: $transition;
+        text-decoration: none;
+        @keyframes pulse-shadow {
+          0% {
+            box-shadow: 0 0;
+
+          }
+
+        70% {
+            box-shadow: 0 0 3px 50px transparent;
+          }
+
+          100% {
+            box-shadow: 0 0 0 0 transparent;
+          }
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+//social end

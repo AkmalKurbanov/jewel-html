@@ -40,6 +40,22 @@
     }
   }
 
+  &__item-wrap {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      .list__item {
+        transform: translateY(-15px);
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.7);
+        @include sm {
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+
   &__item {
     border-radius: 10px;
     background-color: $maincolor;
@@ -85,5 +101,7 @@
         }
       }
     }
+
   }
 }
+

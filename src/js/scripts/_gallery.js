@@ -8,6 +8,7 @@ $('[data-fancybox="images"]').fancybox({
         'download',
         'thumbs',
     ],
+    animationEffect : "fade",
     thumbs : {
         autoStart : true
     }

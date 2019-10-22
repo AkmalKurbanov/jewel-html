@@ -30,17 +30,26 @@
       font-size: 40px;
       max-width: 92.5%;
       width: 100%;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      @include xs {
+        font-size: 30px;
+        margin-bottom: 7px;
+      }
 
       &:before {
         position: absolute;
         content: '';
         width: 100%;
-        height: 1px;
-        background-color: $bc;
+        height: 2px;
+        background-color: #767676;
         left: 0;
-        top: 50%;
-        transform: translateY(-50%);
+        bottom: auto;
+        left: auto;
+        transform: translateX(0);
       }
     }
   }
@@ -49,13 +58,16 @@
 .pyramid ul li ul li ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 
   li {
     .pyramid__user {
       font-size: 30px;
       margin-bottom: 30px;
-
+      @include xs {
+        font-size: 20px;
+        margin-bottom: 20px;
+      }
       &:after {
         position: absolute;
         content: '';
@@ -73,7 +85,10 @@
         .pyramid__user {
           font-size: 20px;
           margin-bottom: 0;
-
+          color: #7f7f7f;
+          @include xs {
+            font-size: 14px;
+          }
           &:before {
             position: absolute;
             content: '';
