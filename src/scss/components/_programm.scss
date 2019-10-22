@@ -45,6 +45,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include sm {
+      margin-bottom: 20px;
+    }
     &:hover {
       .list__item {
         transform: translateY(-15px);
@@ -72,6 +78,7 @@
       max-width: 330px;
       min-height: 110px;
     }
+
     @include sm {
       margin-bottom: 20px;
     }

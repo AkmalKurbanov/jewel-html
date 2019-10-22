@@ -4,10 +4,11 @@
   width: 100%;
   max-width: 100%;
   padding: 0;
+
   .popup-window {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 570px;
     width: 100%;
     background-color: $wc;
@@ -15,6 +16,7 @@
     transition: $transition;
     @include sm {
       flex-direction: column;
+      justify-content: flex-start;
     }
 
     &__aside {
@@ -72,8 +74,17 @@
       }
     }
   }
-}
 
+  .recovery {
+    margin-top: 10px;
+    color: $secondarycolor;
+    transition: $transition;
+
+    &:hover {
+      color: $maincolor;
+    }
+  }
+}
 
 
 .close-btn {
@@ -87,6 +98,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+
   &:hover {
     i {
       color: $secondarycolor;

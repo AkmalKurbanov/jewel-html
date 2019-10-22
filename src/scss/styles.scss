@@ -9,7 +9,7 @@
 //---------------------------------------------
 // подключение сгенерированных иконок(fontello),
 // FontAwesome
-//@import "../assets/icons/fontawesome5/css/fontawesome.css";
+//@import "../assets/icons/fontawesome5/css/all.min.css";
 @import "../assets/icons/fontello/css/icon.css";
 //---------------------------------------------
 // подключение css файлов
@@ -49,4 +49,5 @@
 @import "components/accordion-info";
 @import "components/accordion-info";
 @import "components/monetary-form";
-@import "components/_profile.pyramid";
+@import "components/profile.pyramid";
+@import "components/programm-activation";
