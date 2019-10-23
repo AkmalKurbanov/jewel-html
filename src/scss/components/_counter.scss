@@ -13,12 +13,15 @@
 
   &__chart {
     position: relative;
-    max-width: 260px;
+    max-width: 290px;
     width: 100%;
     @include md {
-      max-width: 200px;
+      max-width: 250px;
     }
     @include sm {
+      max-width: 200px;
+    }
+    @include xs {
       max-width: 150px;
     }
   }
@@ -57,6 +60,7 @@
 
       &__status {
         font-size: 24px;
+        text-transform: uppercase;
         @include md {
           font-size: 20px;
         }
@@ -69,6 +73,7 @@
       }
     }
   }
+
 
   &__chart-item {
     max-width: 44%;
@@ -87,7 +92,7 @@
     }
     @include xs {
       min-height: auto;
-      max-width: 40%;
+      max-width: 45%;
       border: none;
     }
 
@@ -95,6 +100,34 @@
       border-right: 0;
     }
   }
+
+  &__circular-chart {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__circle-bg {
+    fill: none;
+    stroke: #b6b6b6;
+    stroke-width: 1;
+  }
+
+  &__circle {
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+    animation: progress 2s ease-out forwards;
+    stroke: $auxiliary;
+  }
 }
+
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+
 
 

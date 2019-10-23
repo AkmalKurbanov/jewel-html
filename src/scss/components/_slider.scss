@@ -42,11 +42,15 @@
     transform: translateY(-50%);
     font-size: 60px;
     color: #999999;
+    transition: $transition;
     @include sm {
       top: auto;
       bottom: 0;
       transform: translateY(0);
       font-size: 30px;
+    }
+    &:hover {
+      color: $auxiliary;
     }
   }
 
