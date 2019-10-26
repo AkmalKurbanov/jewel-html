@@ -1,5 +1,6 @@
 .counter {
   padding: 50px 0;
+  //display: none;
   @include md {
     padding: 40px 0;
   }

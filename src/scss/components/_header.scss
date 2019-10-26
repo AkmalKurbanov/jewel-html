@@ -1,7 +1,9 @@
 .header {
   background-color: $maincolor;
   border-bottom: 3px solid #3c4e89;
-
+  @include sm {
+    padding: 10px 0;
+  }
   .mobile-menu {
     display: none;
     @include sm {
@@ -29,10 +31,14 @@
   }
 
   &__logo {
-    max-width: 150px;
-
+    max-width: 90px;
+    width: 100%;
     @include lg {
-      max-width: 120px;
+      max-width: 100px;
+    }
+
+    @include sm {
+      max-width: 80px;
     }
 
 
