@@ -10,6 +10,8 @@ const cssmin = require('gulp-clean-css');
 const plumber = require('gulp-plumber');
 const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
+const clean = require('gulp-clean');
+
 
 gulp.task('scss', function () {
     return gulp.src('src/scss/**/*.scss')
@@ -66,7 +68,6 @@ gulp.task('js', function () {
             'node_modules/jquery/dist/jquery.js',
             'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
             'node_modules/swiper/js/swiper.min.js',
-            'node_modules/easy-pie-chart/dist/jquery.easypiechart.min.js',
             'src/js/scripts/*.js'
         ])
         .pipe(plumber({
@@ -92,6 +93,11 @@ gulp.task('js', function () {
         .pipe(browsersync.reload({stream: true}))
 });
 
+gulp.task('clean', function () {
+    return gulp.src('dist', {read: false})
+        .pipe(clean());
+});
+
 
 gulp.task('watch', ['scss', 'browser-sync', 'html', 'js', 'assets'], function () {
     gulp.watch('src/scss/**/*.scss', ['scss', browsersync.reload]);
@@ -100,6 +106,6 @@ gulp.task('watch', ['scss', 'browser-sync', 'html', 'js', 'assets'], function ()
     gulp.watch('src/**/*.html', ['html', browsersync.reload])
 });
 
-gulp.task('build', ['scss', 'html', 'js', 'assets']);
+gulp.task('build', ['clean','scss', 'html', 'js', 'assets']);
 
 gulp.task('default', ['watch']);

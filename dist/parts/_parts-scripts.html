@@ -1,20 +1,5 @@
 <script>
-    let charts = $('.program');
-    let chartsTop = charts.offset().top;
-    $(window).bind('scroll', function () {
-        let windowTop = $(this).scrollTop();
-        if (windowTop > chartsTop) {
-            $('.total-js').each(function () {
-                $(this).prop('Counter', 0).animate({
-                    Counter: $(this).attr('data-value')
-                }, {
-                    duration: 2000,
-                    easing: 'swing',
-                    step: function (now) {
-                        $(this).text(Math.ceil(now));
-                    }
-                });
-            });
-        }
+    particlesJS.load('particles-js', 'assets/particles.json', function () {
+        console.log('callback - particles.js config loaded');
     });
 </script>

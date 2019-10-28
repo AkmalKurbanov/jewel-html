@@ -112,6 +112,7 @@
             </div>
             <!-- /.login.html -->
             <div class="content">
+                <div id="particles-js"></div>
                 <header class="header">
                     <div class="mobile-menu"></div>
                     <div class="container">
@@ -154,7 +155,7 @@
                 </header>
                 <!-- /.header -->
                 <div class="news">
-                    <div class="container">
+                    <div class="container overlap-bg">
                         <div class="title-wrap">
                              <h2 class="title title--other">НОВОСТИ</h2>
 
@@ -329,6 +330,12 @@
             <!-- /.footer -->
         </div>
         <script src="assets/scripts.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
+        <script>
+            particlesJS.load('particles-js', 'assets/particles.json', function () {
+                console.log('callback - particles.js config loaded');
+            });
+        </script>
         <!-- /.wrapper -->
     </body>
 

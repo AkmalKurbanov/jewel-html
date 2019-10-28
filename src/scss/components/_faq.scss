@@ -1,0 +1,25 @@
+.faq {
+
+  .faq-section {
+    background-color: #1b245b;
+    padding: 14px 14px 14px 5px;
+  }
+
+  .accordion__item {
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  h3, p {
+    font-family: 'Montserrat';
+    font-weight: 500!important;
+    font-size: 18px!important;
+  }
+
+  p {
+    color: $wc;
+  }
+}

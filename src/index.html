@@ -7,8 +7,8 @@
 
 <body>
 
-
 <div class="wrapper">
+
 
     <part src="_registration.html"></part>
     <!-- /.registration -->
@@ -18,6 +18,8 @@
 
 
     <div class="content">
+
+        <div id="particles-js"></div>
 
         <part src="_header.html"></part>
         <!-- /.header -->
@@ -41,7 +43,6 @@
         <!-- /.advantages -->
 
 
-
     </div>
     <!-- /.content -->
 
@@ -54,9 +55,26 @@
 <part src="_scripts.html"></part>
 <part src="_parts-scripts.html"></part>
 <!-- /.wrapper -->
-
-
-
+<script>
+    let charts = $('.program');
+    let chartsTop = charts.offset().top;
+    $(window).bind('scroll', function () {
+        let windowTop = $(this).scrollTop();
+        if (windowTop > chartsTop) {
+            $('.total-js').each(function () {
+                $(this).prop('Counter', 0).animate({
+                    Counter: $(this).attr('data-value')
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    });
+</script>
 
 </body>
 

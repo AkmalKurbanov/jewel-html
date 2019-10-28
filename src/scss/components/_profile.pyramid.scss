@@ -56,6 +56,11 @@
       font-size: 14px;
       color: $wc;
       text-transform: uppercase;
+      transition: $transition;
+
+      &:hover {
+        color: $secondarycolor;
+      }
     }
   }
 
