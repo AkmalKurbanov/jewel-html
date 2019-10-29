@@ -7,6 +7,9 @@
     cursor: pointer;
     padding: 14px 40px 14px 30px;
     background-color: #1b245b;
+    @include lg {
+      padding: 15px;
+    }
 
     &:hover {
       .accordion__icon i, .accordion__icon-open i, h3 {
@@ -40,7 +43,12 @@
       font-family: 'Favorit';
       line-height: 27px;
       transition: $transition;
+      @include lg {
+        line-height: normal;
+        font-size: 16px !important;
+      }
     }
+
     a {
 
     }
@@ -51,6 +59,7 @@
     width: 100%;
     text-align: center;
     margin-right: 10px;
+
     i {
       color: $secondarycolor;
       font-size: 16px;
@@ -65,7 +74,8 @@
     top: 50%;
     transform: translateY(-50%);
     transition: $transition;
-    i{
+
+    i {
       color: $secondarycolor;
       font-size: 20px;
       transition: $transition;
@@ -80,6 +90,7 @@
   &__link-item {
     margin-bottom: 7px;
     color: $wc;
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -90,6 +101,9 @@
       font-size: 17px;
       font-weight: 500;
       font-family: 'Favorit';
+      @include lg {
+        font-size: 15px;
+      }
 
       &:hover {
         color: $secondarycolor;

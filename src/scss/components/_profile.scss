@@ -8,10 +8,16 @@
     justify-content: flex-start;
     align-items: stretch;
     position: relative;
+
     .hamburger {
       right: 50px;
-      @include lg {
+      top: 38px;
+      @include md {
         display: block;
+      }
+      @include md {
+        right: 15px;
+        top: 23px;
       }
     }
   }
@@ -19,6 +25,9 @@
   .pr {
     &-wrap {
       padding: 30px 50px 20px 30px;
+      @include md {
+        padding: 15px;
+      }
     }
   }
 }

@@ -2,7 +2,12 @@
   max-width: 290px;
   width: 100%;
   background-color: $maincolor;
-
+  transition: all 1s;
+  z-index: 99999;
+  @include md {
+    position: absolute;
+    left: -100%;
+  }
 
   &__logo {
     max-width: 130px;
@@ -10,6 +15,7 @@
     margin: 15px auto 2px;
     @include lg {
       max-width: 90px;
+      margin: 15px auto 10px;
     }
 
     a {
@@ -24,6 +30,9 @@
   .bar-section {
     background-color: #1b245b;
     padding: 14px 14px 14px 30px;
+    @include lg {
+      padding: 15px;
+    }
   }
 
   &__user-info-section {
@@ -32,6 +41,11 @@
       color: $wc;
       font-weight: 600;
       margin-bottom: 25px;
+      @include lg {
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: 500;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -39,3 +53,11 @@
     }
   }
 }
+
+.open-side-bar {
+  left: 0;
+  z-index: 9999999;
+  transition: all 1s;
+}
+
+

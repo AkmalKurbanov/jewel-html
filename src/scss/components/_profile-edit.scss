@@ -13,21 +13,41 @@
 .pin-edit {
   display: flex;
   flex-direction: row;
-
+  flex-wrap: wrap;
   &__item {
     flex-basis: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media (max-width: 1599.98px) {
+      flex-basis: 45%;
+    }
+    @include lg{
+      flex-basis: 100%;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
     p{
       line-height: 17px;
+      @media (max-width: 1599.98px) {
+        font-size: 15px;
+      }
     }
     &:first-child {
       margin-right: 30px;
+      @include lg{
+        margin-right: 0;
+      }
       p {
         color: $secondarycolor;
         text-align: center;
         margin-bottom: 40px;
+        @include lg{
+          margin-bottom: 20px;
+        }
       }
     }
 

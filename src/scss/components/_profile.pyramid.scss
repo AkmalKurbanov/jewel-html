@@ -16,6 +16,12 @@
           height: 50px;
           top: 100%;
           background-color: $wc;
+          @media (max-width: 1599.98px) {
+            height: 35px;
+          }
+          @include sm {
+            display: none;
+          }
         }
 
         .pyramid__user-email {
@@ -29,8 +35,6 @@
       height: 100px;
       border-radius: 100%;
       border: 3px solid $secondarycolor;
-
-
     }
 
     .pyramid__user {
@@ -38,6 +42,10 @@
       height: 100px;
       border-radius: 100%;
       margin-bottom: 10px !important;
+      @media (max-width: 1599.98px) {
+        width: 70px;
+        height: 70px;
+      }
 
       i {
         color: $wc;
@@ -45,6 +53,9 @@
         z-index: 1;
         position: relative;
         font-size: 50px;
+        @media (max-width: 1599.98px) {
+          font-size: 30px;
+        }
       }
 
       &:before, &:after {
@@ -70,6 +81,17 @@
     align-items: flex-start;
     justify-content: center;
     margin-bottom: -80px;
+    position: relative;
+    @media (max-width: 1599.98px) {
+      margin-bottom: 0;
+    }
+    @include lg {
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    @include xs {
+      padding-top: 80px;
+    }
   }
 
   &__item {
@@ -77,12 +99,27 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
-
+    @include xs {
+      position: absolute;
+    }
+    &:first-child {
+      left: 0;
+      top: 0;
+    }
+    &:last-child {
+      right: 0;
+      top: 0;
+    }
     &:nth-child(2) {
-      padding: 0 60px;
-      max-width: 42%;
+      max-width: 600px;
       width: 100%;
       justify-content: space-between;
+      @media (max-width: 1349.98px) {
+        flex-direction: column;
+      }
+      @include xs {
+        position: relative;
+      }
     }
 
   }
@@ -101,8 +138,15 @@
     white-space: nowrap;
     border-radius: 40px;
 
+    @media (max-width: 1599.98px) {
+      font-size: 20px;
+    }
+
     &--name {
       background-color: $auxiliary;
+      @media (max-width: 1349.98px) {
+        margin-bottom: 20px;
+      }
     }
 
     &--contribution {
@@ -115,11 +159,25 @@
     height: 196px;
     border-radius: 100%;
     overflow: hidden;
+    @include lg {
+      width: 100px;
+      height: 100px;
+    }
+    @include xs {
+      width: 50px;
+      height: 50px;
+    }
+    img{
+      max-width: 100%;
+    }
   }
 }
 
 
 .pyramid-profile-jewel ul li ul li ul {
+  @media (max-width: 1599.98px) {
+    flex-wrap: wrap;
+  }
 
   .pyramid__user-wrap {
     position: relative;
@@ -128,10 +186,14 @@
     flex-direction: column;
     padding-bottom: 30px;
 
+
     &:before, &:after {
       position: absolute;
       content: '';
       background-color: $wc;
+      @include sm {
+        display: none;
+      }
     }
 
     &:before {
@@ -139,18 +201,33 @@
       width: 100%;
       transform: translateY(-50%);
       top: 33%;
+      @media (max-width: 1599.98px) {
+        display: none;
+      }
     }
 
     &:after {
-      height: 35px;
+      height: 30px;
       width: 2px;
       top: 38%;
       top: 100%;
+
     }
 
   }
 
   li {
+    @media (max-width: 1599.98px) {
+      flex-basis: 50%;
+    }
+    @include xs {
+      border-right: 1px solid $wc;
+    }
+
+    &:nth-child(2n) {
+      border: none;
+    }
+
     .pyramid__user {
       border: 3px solid $wc;
       display: flex;
@@ -172,16 +249,56 @@
 
 
     ul {
+      @media (max-width: 1599.98px) {
+        flex-wrap: nowrap;
+      }
+      @include sm {
+        flex-wrap: wrap;
+      }
+
       li {
+        border: none;
+        @include sm {
+          max-width: 50%;
+        }
+
+        &:nth-child(2n) {
+          @media (max-width: 1599.98px) {
+            .pyramid__user-email {
+              padding-top: 20px;
+              color: $secondarycolor;
+              @include sm {
+                padding-top: 0;
+              }
+              @include xs {
+                padding: 20px 5px;
+              }
+            }
+          }
+
+        }
 
         .pyramid__user-wrap {
+          @include xs {
+            padding-bottom: 10px;
+          }
+
           i {
             font-size: 25px;
+            @media (max-width: 1599.98px) {
+              font-size: 20px;
+            }
           }
 
           &:before {
             width: 100% !important;
             top: 24%;
+            @media (max-width: 1599.98px) {
+              display: block;
+            }
+            @include sm {
+              display: none;
+            }
           }
 
           &:after {
@@ -190,6 +307,14 @@
 
           .pyramid__user-email {
             min-height: 50px;
+            @include sm {
+              min-height: 25px;
+            }
+            @include xs {
+              text-transform: lowercase;
+              word-break: break-word;
+              padding: 0 2px;
+            }
           }
         }
 
@@ -202,6 +327,10 @@
         .pyramid__user {
           width: 60px;
           height: 60px;
+          @media (max-width: 1599.98px) {
+            width: 45px;
+            height: 45px;
+          }
         }
 
 
@@ -211,6 +340,12 @@
             &:before {
               width: 37px !important;
               right: 0;
+              @media (max-width: 1599.98px) {
+                display: block;
+              }
+              @include sm {
+                display: none;
+              }
             }
           }
         }

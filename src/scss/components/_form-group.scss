@@ -107,7 +107,6 @@
 
 .form {
   &-monetary-form {
-    display: inline-block;
     padding-bottom: 25px;
     position: relative;
   }
@@ -116,6 +115,11 @@
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
+    @include md {
+      flex-direction: column;
+      align-items: center;
+      margin-right: 0;
+    }
   }
 
   &-group-wrap {
@@ -125,6 +129,13 @@
     width: 100%;
     justify-content: center;
     position: relative;
+    @include md {
+      max-width: 80%;
+      margin: 0 auto;
+    }
+    @include sm {
+      max-width: 100%;
+    }
 
     input, .select {
       height: 60px;
@@ -150,11 +161,27 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    @include lg {
+      margin-left: 15px;
+    }
+    @include md {
+      margin-left: 0;
+      margin-top: 10px;
+    }
 
     p {
       color: $wc;
-      white-space: nowrap;
       font-weight: 700;
+      @include lg {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+      }
+      @include md {
+        font-size: 15px;
+        line-height: normal;
+        text-align: center;
+      }
     }
   }
 
@@ -210,6 +237,7 @@
   width: 100%;
   text-align: center;
   margin-top: 5px;
+
   span {
     font-weight: 600;
     position: relative;
@@ -239,7 +267,8 @@
       content: "\f00c";
     }
   }
-  .form-add-info{
+
+  .form-add-info {
     margin-left: 0;
   }
 }

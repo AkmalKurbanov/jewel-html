@@ -6,6 +6,9 @@
     justify-content: space-between;
     margin-top: 40px;
     position: relative;
+    @include sm {
+      flex-direction: column;
+    }
 
     &:before {
       position: absolute;
@@ -13,6 +16,9 @@
       height: 13px;
       width: 100%;
       background-color: $maincolor;
+      @include sm {
+        display: none;
+      }
     }
 
     &-item {
@@ -31,11 +37,26 @@
       @media (max-width: 1599.98px) {
         max-width: 30%;
         min-height: 130px;
-        padding-left: 25px;
+        padding-left: 20px;
       }
       @include lg {
         min-height: 100px;
-        padding-left: 20px;
+        padding-left: 15px;
+      }
+      @include md {
+        padding: 10px;
+      }
+      @include sm {
+        max-width: 90%;
+        margin-bottom: 15px;
+        box-shadow: 0 0 10px 5px rgba($bc, .3);
+      }
+      @include xs {
+        max-width: 100%;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
       }
 
       &:before, &:after {
@@ -137,6 +158,14 @@
           font-size: 20px;
           margin-bottom: 7px;
         }
+        @include md {
+          font-size: 18px;
+          margin-bottom: 5px;
+        }
+        @include sm {
+          font-size: 22px;
+          margin-bottom: 10px;
+        }
       }
 
       span {
@@ -146,6 +175,12 @@
         }
         @include lg {
           font-size: 13px;
+        }
+        @include md {
+          font-size: 11px;
+        }
+        @include sm {
+          font-size: 14px;
         }
       }
     }
@@ -160,6 +195,9 @@
       @include lg {
         bottom: 20px;
         opacity: .3;
+      }
+      @include sm {
+        max-width: 130px;
       }
 
       img {

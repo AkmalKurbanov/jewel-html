@@ -7,8 +7,14 @@ if ($(window).width() <= 767) {
     $('.header__nav-wrapper').clone().appendTo('.mobile-menu');
 }
 
+
+$('.hamburger').on('click', function () {
+    $('.side-bar').toggleClass('open-side-bar');
+    $('body').removeClass('mobileBody-scroll');
+    $('.content-side').toggleClass('shaded-bg');
+});
 if ($(window).width() <= 1199) {
-    $('.header--pr-header').clone().appendTo('.mobile-menu');
+    $('.header--pr-header').clone().appendTo('.profile-menu');
 }
 
 

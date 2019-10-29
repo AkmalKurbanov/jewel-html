@@ -4,6 +4,18 @@
   .info-wrap {
     background-color: $maincolor;
     padding: 35px;
+    @include lg {
+      padding: 30px;
+    }
+    @include md {
+      padding: 20px;
+    }
+    @include sm {
+      padding: 15px;
+    }
+    @include xs {
+      padding: 15px 10px;
+    }
   }
 
   .list-nav {
@@ -14,11 +26,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
     ul {
       li {
         margin-right: 50px;
         display: inline-block;
         margin-bottom: 0;
+
         &:last-child {
           margin-right: 0;
         }
