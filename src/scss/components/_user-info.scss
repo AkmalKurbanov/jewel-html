@@ -19,7 +19,7 @@
       background-color: $maincolor;
       position: relative;
       box-shadow: 0 0 30px 10px rgba($bc, .3);
-      max-width: 371px;
+      max-width: 24.2%;
       width: 100%;
       min-height: 170px;
       overflow: hidden;
@@ -28,6 +28,15 @@
       justify-content: space-between;
       padding-left: 30px;
       padding-right: 20px;
+      @media (max-width: 1599.98px) {
+        max-width: 30%;
+        min-height: 130px;
+        padding-left: 25px;
+      }
+      @include lg {
+        min-height: 100px;
+        padding-left: 20px;
+      }
 
       &:before, &:after {
         position: absolute;
@@ -96,6 +105,10 @@
       display: flex;
       flex-direction: column;
       margin-right: 15px;
+      @media (max-width: 1599.98px) {
+        margin-right: 0;
+      }
+
       p, span {
         color: $wc;
         text-transform: uppercase;
@@ -116,16 +129,38 @@
       p {
         font-size: 25px;
         margin-bottom: 15px;
+        @media (max-width: 1599.98px) {
+          font-size: 22px;
+          margin-bottom: 10px;
+        }
+        @include lg {
+          font-size: 20px;
+          margin-bottom: 7px;
+        }
       }
 
       span {
         font-size: 15px;
+        @media (max-width: 1599.98px) {
+          font-size: 14px;
+        }
+        @include lg {
+          font-size: 13px;
+        }
       }
     }
 
     &-img {
-      max-width: 130px;
+      max-width: 40.5%;
       width: 100%;
+      @media (max-width: 1599.98px) {
+        position: absolute;
+        right: 20px;
+      }
+      @include lg {
+        bottom: 20px;
+        opacity: .3;
+      }
 
       img {
         width: 100%;

@@ -7,7 +7,7 @@
   height: 30px;
   cursor: pointer;
   display: none;
-  z-index: 99;
+  z-index: 100;
   @include sm {
     display: block;
   }

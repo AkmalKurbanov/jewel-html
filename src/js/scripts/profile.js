@@ -28,7 +28,7 @@ $('#search').on('keyup', function () {
         val = $this.val();
 
     if (val.length >= 1) {
-        $('#search').css('max-width', '100%');
+        $('.pr #search, .pr .pr-input-search').css({'max-width': '100%', 'width': '100%'});
         $('.delete-search').show();
     } else {
         $('#search').css('max-width', '192px');
@@ -37,7 +37,8 @@ $('#search').on('keyup', function () {
 
 
 $('.delete-search').on('click', function () {
-    $('#search').css('max-width', '192px').val('');
+    $('.pr #search,.pr .pr-input-search').css('max-width', '192px');
+    $('#search').val('');
     $(this).hide();
 });
 

@@ -7,9 +7,22 @@
     min-height: 70px;
     border: none;
     padding-right: 50px;
+    @include lg {
+      display: none;
+    }
 
     .nav {
       padding-right: 56px;
+      @media (max-width: 1499.98px) {
+        padding-right: 10px;
+      }
+
+      a {
+        @media (max-width: 1499.98px) {
+          font-size: 13px;
+          padding: 0 10px;
+        }
+      }
     }
   }
 }
@@ -73,15 +86,24 @@
   }
 
   &-search {
-    margin-right: 30px;
+    min-width: 270px;
+    width: 100%;
+    @media (max-width: 1499.98px) {
+      min-width: 220px;
+    }
+
+    form {
+      display: flex;
+      justify-content: flex-end;
+    }
   }
 
   &-input-search {
     display: flex;
     align-items: center;
     position: relative;
-    min-width: 270px;
-    width: 100%;
+    justify-content: flex-end;
+    transition: $transition;
 
     button {
       border: none;
@@ -125,40 +147,6 @@
       color: #777777;
       font-family: 'Favorit';
       transition: $transition;
-
-    }
-  }
-
-  &-settings {
-    width: 38px;
-    height: 38px;
-    background-color: $secondarycolor;
-    border-radius: 100%;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: $transition;
-
-    &:hover {
-      animation: rotating 2s linear infinite;
-
-      i {
-        @keyframes rotating {
-          from {
-            transform: rotate(0deg);
-          }
-          to {
-            transform: rotate(360deg);
-          }
-        }
-      }
-    }
-
-    i {
-      font-size: 20px;
-      transition: $transition;
-      position: absolute;
     }
   }
 }

@@ -8,14 +8,20 @@
     max-width: 130px;
     width: 100%;
     margin: 15px auto 2px;
-a{
-  display: block;
-}
+    @include lg {
+      max-width: 90px;
+    }
+
+    a {
+      display: block;
+    }
+
     img {
       width: 100%;
     }
   }
-  .bar-section{
+
+  .bar-section {
     background-color: #1b245b;
     padding: 14px 14px 14px 30px;
   }
@@ -26,6 +32,7 @@ a{
       color: $wc;
       font-weight: 600;
       margin-bottom: 25px;
+
       &:last-child {
         margin-bottom: 0;
       }

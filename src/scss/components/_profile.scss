@@ -7,6 +7,13 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: stretch;
+    position: relative;
+    .hamburger {
+      right: 50px;
+      @include lg {
+        display: block;
+      }
+    }
   }
 
   .pr {
