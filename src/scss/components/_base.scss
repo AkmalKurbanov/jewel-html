@@ -162,7 +162,10 @@ ul {
   transition: all .5s;
   line-height: normal;
   background-color: transparent;
-
+  cursor: pointer;
+  @include xs {
+    font-size: 14px;
+  }
   &:hover {
     color: $wc;
 
@@ -265,7 +268,9 @@ ul {
   margin-bottom: 10px !important;
   font-weight: 700;
   font-size: 18px;
-
+  @include xs {
+    font-size: 16px;
+  }
   &:after {
     width: 100%;
   }

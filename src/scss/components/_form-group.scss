@@ -120,6 +120,7 @@
       align-items: center;
       margin-right: 0;
     }
+
   }
 
   &-group-wrap {
@@ -137,7 +138,7 @@
       max-width: 100%;
     }
 
-    input, .select {
+    input, .select, textarea {
       height: 60px;
       border: none;
       outline: none;
@@ -151,8 +152,11 @@
       display: flex;
     }
 
-    input {
+    input, textarea {
       padding: 0 25px;
+      @include xs {
+        padding: 0 10px;
+      }
     }
   }
 
@@ -202,6 +206,9 @@
 
     &_checked {
       padding-left: 25px;
+      @include xs {
+        padding-left: 10px;
+      }
     }
 
     &__dropdown {
