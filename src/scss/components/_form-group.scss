@@ -191,7 +191,7 @@
 
   .select {
     cursor: pointer;
-    z-index: 9;
+    z-index: 2;
     padding-right: 50px;
 
     &:before {
@@ -217,11 +217,12 @@
       display: none;
       width: 100%;
       background-color: $wc;
-      padding-left: 25px;
-      padding-bottom: 10px;
-      padding-right: 10px;
+      padding: 0 10px 10px 25px;
       text-align: left;
-      box-shadow: 0 0 20px 5px rgba($wc, .3);
+      box-shadow: 0 11px 10px 0px rgba(0,0,0,0.5);
+      @include xs {
+        padding-left: 10px;
+      }
     }
 
     &__option {
@@ -235,6 +236,14 @@
       &:hover {
         color: #00b7f4;
       }
+    }
+  }
+
+  .slide-down-select {
+    z-index: 999999999;
+
+    .select__dropdown {
+      display: block;
     }
   }
 }

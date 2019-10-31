@@ -5,11 +5,16 @@
   max-width: 100%;
   padding: 0;
 
+  .container {
+    @include xs {
+      padding: 0 5px;
+    }
+  }
+
   .popup-window {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    min-height: 570px;
     width: 100%;
     background-color: $wc;
     margin: auto;
@@ -19,12 +24,14 @@
       justify-content: flex-start;
     }
 
+
     &__aside {
       flex-basis: 40%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 20px 0;
     }
 
     &__fill-form {
@@ -68,6 +75,12 @@
 
     &__logo {
       max-width: 200px;
+      @include md {
+        max-width: 150px;
+      }
+      @include sm {
+        max-width: 100px;
+      }
 
       img {
         max-width: 100%;
@@ -82,6 +95,97 @@
 
     &:hover {
       color: $maincolor;
+    }
+  }
+
+  &-news {
+
+    .popup-window {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .popup-window__aside {
+      min-height: 140px;
+    }
+
+    .popup-window__logo {
+      max-width: 100px;
+    }
+
+    .new-window__desc {
+      text-align: center;
+      padding: 30px 80px;
+      position: relative;
+      @include lg {
+        padding: 30px 50px;
+      }
+      @include md {
+        padding: 30px;
+      }
+      @include sm {
+        padding: 30px 15px;
+      }
+      @include sm {
+        padding: 20px 10px;
+      }
+
+
+      h1 {
+        font-size: 60px;
+        color: $maincolor;
+        line-height: normal;
+        margin-top: 0;
+        @include lg {
+          font-size: 50px;
+        }
+        @include md {
+          font-size: 40px;
+        }
+        @include sm {
+          font-size: 30px;
+        }
+        @include xs {
+          font-size: 25px;
+        }
+      }
+
+      p {
+        margin-bottom: 30px;
+        @include md {
+          font-size: 17px;
+        }
+        @include sm {
+          font-size: 16px;
+          line-height: normal;
+        }
+        @include xs {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  &-login {
+    .popup-window {
+      max-width: 500px;
+      @include xs {
+        max-width: 100%;
+      }
+    }
+
+    .popup-window__fill-form {
+      padding: 30px 30px;
+    }
+
+    .popup-window__logo {
+      max-width: 150px;
+      @include lg {
+        max-width: 120px;
+      }
+      @include sm {
+        max-width: 100px;
+      }
     }
   }
 }

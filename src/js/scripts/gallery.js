@@ -14,6 +14,10 @@ $('[data-fancybox="images"]').fancybox({
     }
 });
 
+$(document).ready(function() {
+    $("#news-window").fancybox().trigger('click');
+});
+
 
 
 

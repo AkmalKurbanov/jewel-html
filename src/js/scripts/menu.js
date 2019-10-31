@@ -8,7 +8,7 @@ if ($(window).width() <= 767) {
 }
 
 
-$('.hamburger').on('click', function () {
+$('.profile .hamburger').on('click', function () {
     $('.side-bar').toggleClass('open-side-bar');
     $('body').removeClass('mobileBody-scroll');
     $('.content-side').toggleClass('shaded-bg');

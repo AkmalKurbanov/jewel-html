@@ -11,6 +11,7 @@
   @include xs {
     padding: 25px 0;
   }
+
   &__wrapper {
     display: flex;
     flex-direction: row;
@@ -28,9 +29,10 @@
     transition: $transition;
     display: block;
     text-align: center;
-    @include sm{
+    @include sm {
       text-decoration: underline;
     }
+
     &:hover {
       color: $secondarycolor;
     }
@@ -41,6 +43,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    flex-basis: 33.33%;
+
+
     @include sm {
       margin-bottom: 15px;
       &:nth-of-type(1) {
@@ -54,14 +59,16 @@
         order: 3;
       }
     }
-    @include sm {
 
+    &:last-child {
+      margin-bottom: 0;
     }
 
     p {
       color: $wc;
       font-weight: 400;
     }
+
     .fa-envelope {
       margin-right: 10px;
     }
@@ -69,6 +76,12 @@
 
   &__logo {
     max-width: 145px;
+    @include md {
+      max-width: 100px;
+    }
+    @include sm {
+      margin-bottom: 20px;
+    }
 
     img {
       max-width: 100%;

@@ -163,6 +163,7 @@ ul {
   line-height: normal;
   background-color: transparent;
   cursor: pointer;
+  outline: none;
   @include xs {
     font-size: 14px;
   }

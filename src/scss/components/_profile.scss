@@ -13,6 +13,7 @@
       position: fixed;
       right: 50px;
       top: 38px;
+      z-index: 11;
       @include md {
         display: block;
       }

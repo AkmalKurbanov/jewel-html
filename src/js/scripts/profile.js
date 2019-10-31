@@ -45,7 +45,7 @@ $('.delete-search').on('click', function () {
 
 // select dropdown
 $('.select').on('click', function () {
-    $(this).children('.select__dropdown').slideToggle(300);
+    $(this).toggleClass('slide-down-select');
 });
 $('.select__option').on('click', function () {
     let value = $(this).attr('data-value');
@@ -56,9 +56,13 @@ $(document).mouseup(function (e) {
     let div = $(".select");
     if (!div.is(e.target)
         && div.has(e.target).length === 0) {
-        $('.select__dropdown').slideUp();
+        div.removeClass('slide-down-select');
     }
 });
 // select dropdown end
+
+
+
+
 
 
