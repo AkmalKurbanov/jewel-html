@@ -13,12 +13,12 @@ $('.profile .hamburger').on('click', function () {
     $('body').removeClass('mobileBody-scroll');
     $('.content-side').toggleClass('shaded-bg');
 });
-if ($(window).width() <= 1199) {
+if ($(window).width() < 992) {
     $('.header--pr-header').clone().appendTo('.profile-menu');
 }
 
 
-$('.nav__item').on('click', function () {
+$('.nav__item, .accordion__link-item').on('click', function () {
     $('.mobile-menu').removeClass('open-menu');
     $('body').removeClass('mobileBody-scroll');
     $('.hamburger ').removeClass('hamburger-open');

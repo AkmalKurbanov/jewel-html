@@ -37,7 +37,7 @@
     cursor: pointer;
     outline: none;
     position: absolute;
-    z-index: 9;
+    z-index: 1;
     top: 50%;
     transform: translateY(-50%);
     font-size: 60px;
@@ -58,6 +58,7 @@
     display: none;
     bottom: 0;
     transform: translateY(-50%);
+    z-index: 1;
     @include sm {
       display: block;
       left: 50%;

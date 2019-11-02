@@ -27,6 +27,9 @@
   .pr {
     &-wrap {
       padding: 30px 50px 20px 30px;
+      @include lg {
+        padding-right: 30px;
+      }
       @include md {
         padding: 15px;
       }
