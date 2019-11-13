@@ -1,96 +1,15 @@
 .pyramid {
-
-  &-profile-jewel {
-
-    .pyramid__user-wrap {
-      padding-bottom: 10px;
-
-
-      &--main-user {
-        position: relative;
-
-        &:before {
-          position: absolute;
-          content: '';
-          width: 2px;
-          height: 50px;
-          top: 100%;
-          background-color: $wc;
-          @media (max-width: 1599.98px) {
-            height: 35px;
-          }
-          @include sm {
-            display: none;
-          }
-        }
-
-        .pyramid__user-email {
-          color: $secondarycolor;
-        }
-      }
-    }
-
-    .pyramid__user--main-user {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      border: 3px solid $secondarycolor;
-    }
-
-    .pyramid__user {
-      width: 100px;
-      height: 100px;
-      border-radius: 100%;
-      margin-bottom: 10px !important;
-      @media (max-width: 1599.98px) {
-        width: 70px;
-        height: 70px;
-      }
-
-      i {
-        color: $wc;
-        background-color: transparent;
-        z-index: 1;
-        position: relative;
-        font-size: 50px;
-        @media (max-width: 1599.98px) {
-          font-size: 30px;
-        }
-      }
-
-      &:before, &:after {
-        display: none;
-      }
-    }
-
-    .pyramid__user-email {
-      font-size: 14px;
-      color: $wc;
-      text-transform: uppercase;
-      transition: $transition;
-
-      &:hover {
-        color: $secondarycolor;
-      }
-    }
-  }
-
   &__vip {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    margin-bottom: -80px;
     position: relative;
-    @media (max-width: 1599.98px) {
-      margin-bottom: 0;
-    }
+    margin-bottom: 60px;
+
     @include lg {
       align-items: center;
       margin-bottom: 30px;
-    }
-    @include xs {
-      padding-top: 80px;
     }
   }
 
@@ -99,27 +18,14 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    max-width: 500px;
+    width: 100%;
+    justify-content: space-between;
+
+
     @include xs {
-      position: absolute;
-    }
-    &:first-child {
-      left: 0;
-      top: 0;
-    }
-    &:last-child {
-      right: 0;
-      top: 0;
-    }
-    &:nth-child(2) {
-      max-width: 600px;
-      width: 100%;
-      justify-content: space-between;
-      @media (max-width: 1349.98px) {
-        flex-direction: column;
-      }
-      @include xs {
-        position: relative;
-      }
+      position: relative;
+      flex-direction: column;
     }
 
   }
@@ -144,7 +50,8 @@
 
     &--name {
       background-color: $auxiliary;
-      @media (max-width: 1349.98px) {
+
+      @include xs {
         margin-bottom: 20px;
       }
     }
@@ -154,246 +61,290 @@
     }
   }
 
-  &__item-img {
-    width: 196px;
-    height: 196px;
-    border-radius: 100%;
-    overflow: hidden;
-    @include lg {
-      width: 100px;
-      height: 100px;
-    }
-    @include xs {
-      width: 50px;
-      height: 50px;
-    }
-    img{
-      max-width: 100%;
+  &__vip-list {
+    text-align: left;
+
+    ol {
+      text-align: left;
+      display: inline-block;
+      padding-left: 30px;
+
+      li {
+        color: $wc;
+        transition: $transition;
+        margin-bottom: 10px;
+        font-weight: 600;
+
+        &:hover {
+          color: $secondarycolor;
+          cursor: pointer;
+
+          a {
+            color: $secondarycolor;
+          }
+        }
+
+        a {
+          transition: $transition;
+          color: $wc;
+          font-weight: 600;
+        }
+      }
+
+      .active {
+        color: $secondarycolor;
+
+        a {
+          color: $secondarycolor;
+        }
+      }
     }
   }
-}
 
-
-.pyramid-profile-jewel ul li ul li ul {
-  @media (max-width: 1599.98px) {
-    flex-wrap: wrap;
+  &__vip-total-list {
+    p {
+      color: $wc;
+    }
   }
 
-  .pyramid__user-wrap {
-    position: relative;
+  &__vip-list-pagination {
+    max-width: 300px;
+    width: 100%;
+    margin-bottom: 10px;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+        color: $wc;
+
+
+        a {
+          transition: $transition;
+
+          &:hover {
+            color: $secondarycolor;
+          }
+
+          i {
+            font-size: 30px;
+          }
+
+          color: $wc;
+        }
+      }
+
+      .active {
+        a {
+          pointer-events: none;
+          color: $secondarycolor;
+        }
+      }
+    }
+  }
+
+  &__participant-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding-bottom: 30px;
+  }
+
+  &__participant {
+    border-radius: 100%;
+    border: 3px solid $wc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    background-color: $maincolor;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 1629.98px) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @media (max-width: 1279.98px) {
+      width: 70px;
+      height: 70px;
+    }
+
+    &--main {
+      border-color: $secondarycolor;
+    }
+
+    i {
+      color: $wc;
+      font-size: 50px;
+      @media (max-width: 1629.98px) {
+        font-size: 40px;
+      }
+      @media (max-width: 1279.98px) {
+        font-size: 35px;
+      }
+    }
+  }
 
 
-    &:before, &:after {
+  &__first-level {
+    position: relative;
+    padding-bottom: 10px;
+
+    &:before {
       position: absolute;
       content: '';
+      height: 50%;
+      width: 3px;
       background-color: $wc;
-      @include sm {
-        display: none;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__participant-email {
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+
+    a {
+      color: $wc;
+      font-size: 14px;
+      text-transform: uppercase;
+      transition: $transition;
+
+      &:hover {
+        color: $secondarycolor !important;
       }
     }
 
+    &--main {
+      color: $secondarycolor;
+    }
+  }
+
+  &__second-level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 30px;
+    position: relative;
+
     &:before {
-      height: 2px;
-      width: 100%;
-      transform: translateY(-50%);
-      top: 33%;
-      @media (max-width: 1599.98px) {
-        display: none;
+      position: absolute;
+      content: '';
+      width: 70%;
+      top: 50px;
+      height: 3px;
+      background-color: $wc;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 0;
+      @media (max-width: 1629.98px) {
+        top: 40px;
+      }
+    }
+
+    .pyramid__participant-item {
+      //padding: 0 15px;
+    }
+  }
+
+  &__third-level {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 335px;
+    width: 100%;
+    margin-top: 50px;
+    position: relative;
+    padding: 0 15px;
+
+    &:before {
+      height: 3px;
+      width: 80%;
+      background-color: $wc;
+      left: 50%;
+      top: 35px;
+      transform: translateX(-50%);
+      @media (max-width: 1629.98px) {
+        top: 25px;
+      }
+      @media (max-width: 1279.98px) {
+        top: 20px;
       }
     }
 
     &:after {
-      height: 30px;
-      width: 2px;
-      top: 38%;
-      top: 100%;
-
+      height: 30%;
+      width: 3px;
+      background-color: $wc;
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
     }
 
-  }
-
-  li {
-    @media (max-width: 1599.98px) {
-      flex-basis: 50%;
-    }
-    @include xs {
-      border-right: 1px solid $wc;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
     }
 
-    &:nth-child(2n) {
-      border: none;
-    }
+    .pyramid__participant-email {
+      word-break: break-all;
+      padding: 0 2px;
 
-    .pyramid__user {
-      border: 3px solid $wc;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: $maincolor;
-
-      &:after {
-        position: absolute;
-        content: '';
-        width: 1px;
-        height: 50%;
-        background-color: #000;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-
-
-    ul {
-      @media (max-width: 1599.98px) {
-        flex-wrap: nowrap;
-      }
-      @include sm {
-        flex-wrap: wrap;
-      }
-
-      li {
-        border: none;
-        @include sm {
-          max-width: 50%;
-        }
-
-        &:nth-child(2n) {
-          @media (max-width: 1599.98px) {
-            .pyramid__user-email {
-              padding-top: 20px;
-              color: $secondarycolor;
-              @include sm {
-                padding-top: 0;
-              }
-              @include xs {
-                padding: 20px 5px;
-              }
-            }
-          }
-
-        }
-
-        .pyramid__user-wrap {
-          @include xs {
-            padding-bottom: 10px;
-          }
-
-          i {
-            font-size: 25px;
-            @media (max-width: 1599.98px) {
-              font-size: 20px;
-            }
-          }
-
-          &:before {
-            width: 100% !important;
-            top: 24%;
-            @media (max-width: 1599.98px) {
-              display: block;
-            }
-            @include sm {
-              display: none;
-            }
-          }
-
-          &:after {
-            display: none;
-          }
-
-          .pyramid__user-email {
-            min-height: 50px;
-            @include sm {
-              min-height: 25px;
-            }
-            @include xs {
-              text-transform: lowercase;
-              word-break: break-word;
-              padding: 0 2px;
-            }
-          }
-        }
-
-        .pyramid__user-email {
+      a {
+        color: $wc;
+        font-size: 9px;
+        text-transform: uppercase;
+        @media (max-width: 1279.98px) {
           font-size: 8px;
-          color: $wc;
-          text-transform: uppercase;
-        }
-
-        .pyramid__user {
-          width: 60px;
-          height: 60px;
-          @media (max-width: 1599.98px) {
-            width: 45px;
-            height: 45px;
-          }
         }
 
 
-        &:first-child {
+      }
 
-          .pyramid__user-wrap {
-            &:before {
-              width: 37px !important;
-              right: 0;
-              @media (max-width: 1599.98px) {
-                display: block;
-              }
-              @include sm {
-                display: none;
-              }
-            }
-          }
-        }
+    }
 
-        &:last-child {
-
-          .pyramid__user-wrap {
-            &:before {
-              width: 37px !important;
-              left: 0;
-            }
-          }
-        }
-
+    .pyramid__participant-item {
+      //padding: 0 10px;
+      &:hover {
+        transform: scale(1.2);
+        position: absolute;
       }
     }
 
-    &:first-child {
-      .pyramid__user-wrap {
-
-        &:before {
-          width: 37%;
-          right: 0;
-        }
+    .pyramid__participant {
+      width: 70px;
+      height: 70px;
+      @media (max-width: 1629.98px) {
+        width: 50px;
+        height: 50px;
       }
-    }
-
-    &:last-child {
-      .pyramid__user-wrap {
-        &:before {
-          width: 37%;
-          left: 0;
-        }
+      @media (max-width: 1279.98px) {
+        width: 40px;
+        height: 40px;
       }
 
-      ul {
-        li {
-          &:first-child {
-            .pyramid__user-wrap {
-              &:before {
-                width: 37% !important;
-                right: 0;
-                left: auto;
-              }
-            }
-          }
+      i {
+        font-size: 30px;
+        @media (max-width: 1629.98px) {
+          font-size: 25px;
+        }
+        @media (max-width: 1279.98px) {
+          font-size: 16px;
         }
       }
     }
   }
+
 }
+
+
