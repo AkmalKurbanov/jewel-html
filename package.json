@@ -1,7 +1,7 @@
 {
-  "name": "Project",
+  "name": "Jewel",
   "version": "1.0.0",
-  "description": "Project",
+  "description": "Jewel",
   "main": "index.js",
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
